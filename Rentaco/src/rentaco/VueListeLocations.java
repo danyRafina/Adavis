@@ -20,6 +20,10 @@ public class VueListeLocations extends JPanel {
 	private ModeleListeLocations modeleTableauLocations ;
 	private JTable tableauLocations ;
 	
+	/** Création de la vue de la liste des locations
+	 * @param modele Modèle Locations
+	 * @param controleur Controleur de l'application
+	 */
 	public VueListeLocations(ModeleLocations modele, Controleur controleur) {
 		super();
 		System.out.println("VueListeLocations::VueListeLocations()") ;
@@ -51,6 +55,9 @@ public class VueListeLocations extends JPanel {
 		this.add(boxPrincipal) ;
 	}
 	
+	/** Actualiser le modèle du tableau
+	 * 
+	 */
 	public void actualiser(){
 		System.out.println("VueListeLocations::actualiser()") ;
 		modeleTableauLocations = new ModeleListeLocations(modele,controleur) ;
@@ -58,6 +65,9 @@ public class VueListeLocations extends JPanel {
 		this.appliquerRendu();
 	}
 	
+	/** Appliquer le "rendu" au tableau
+	 * 
+	 */
 	private void appliquerRendu(){
 		System.out.println("VueListeLocations::appliquerRendu()") ;
 		this.tableauLocations.getColumn("Numéro").setCellRenderer(new RenduCelluleLocation()) ;

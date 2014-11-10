@@ -112,7 +112,9 @@ public class VueNouvelleLocation extends JPanel implements ActionListener, Docum
 			
 		}
 	}
-	
+	/** Actualiser le champs de la date
+	 * 
+	 */
 	public void actualiser(){
 		System.out.println("VueNouvelleLocation::actualiser()") ;
 		this.tfDateDepart.setText("");
