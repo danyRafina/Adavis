@@ -14,7 +14,7 @@ import javax.swing.table.* ;
 public class ModeleListeLocations extends AbstractTableModel {
 	private java.util.List<Location> locations ;
 	
-	private final String[] entetes = {"Numéro","Enregistrement","Date départ","Date retour","Client","Véhicule","Départ","Retour","Annulation"} ;
+	private final String[] entetes = {"Numéro","Enregistrement","Date départ","Date retour","Client","Véhicule","Heure enregistrement","Départ","Retour","Annulation"} ;
 	
 	private ModeleLocations modele ;
 	private Controleur controleur ;
@@ -123,10 +123,12 @@ public class ModeleListeLocations extends AbstractTableModel {
 			case 5 :
 				return String.class ;
 			case 6 :
-				return JButton.class ;
+				return String.class ;
 			case 7 :
 				return JButton.class ;
 			case 8 :
+				return JButton.class ;
+			case 9 :
 				return JButton.class ;
 			default :
 				return Object.class ;
@@ -161,12 +163,14 @@ public class ModeleListeLocations extends AbstractTableModel {
 						+ locations.get(indiceLigne).getClient().getPrenom() + " ("
 						+ locations.get(indiceLigne).getClient().getNumero() + ")" ;
 			case 5 :
-				return locations.get(indiceLigne).getVehicule().getImmatriculation() ;			
+				return locations.get(indiceLigne).getVehicule().getImmatriculation() ;
 			case 6 :
-				return "Enreg." ;
+				return locations.get(indiceLigne).getHeureEng() + ":"+locations.get(indiceLigne).getMinutesEng();			
 			case 7 :
 				return "Enreg." ;
 			case 8 :
+				return "Enreg." ;
+			case 9 :
 				return "Annuler" ;
 			default :
 				return null ;

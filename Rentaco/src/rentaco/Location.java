@@ -1,6 +1,7 @@
 package rentaco;
 
 import java.util.GregorianCalendar;
+import java.util.Calendar;
 
 /** Représenter une location
  * 
@@ -193,6 +194,18 @@ public class Location {
 		else {
 			return false ;
 		}
+	}
+	
+	public int getHeureEng(){
+		int heure = this.dateEnreg.get(Calendar.HOUR);;
+		if(this.dateEnreg.get(Calendar.AM_PM) == Calendar.PM){
+			heure +=12;
+		}
+		return heure;
+	}
+	
+	public int getMinutesEng(){
+		return this.dateEnreg.get(Calendar.MINUTE);
 	}
 	
 	/** Indique si la location est terminée

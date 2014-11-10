@@ -76,6 +76,7 @@ public class VueListeLocations extends JPanel {
 		this.tableauLocations.getColumn("Date retour").setCellRenderer(new RenduCelluleLocation()) ;
 		this.tableauLocations.getColumn("Client").setCellRenderer(new RenduCelluleLocation()) ;
 		this.tableauLocations.getColumn("Véhicule").setCellRenderer(new RenduCelluleLocation()) ;
+		this.tableauLocations.getColumn("Heure enregistrement").setCellRenderer(new RenduCelluleLocation()) ;
 		this.tableauLocations.getColumn("Départ").setCellRenderer(new RenduBoutonLocation()) ;
 		this.tableauLocations.getColumn("Retour").setCellRenderer(new RenduBoutonLocation()) ;
 		this.tableauLocations.getColumn("Annulation").setCellRenderer(new RenduBoutonLocation()) ;
