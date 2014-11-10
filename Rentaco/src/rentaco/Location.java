@@ -196,6 +196,9 @@ public class Location {
 		}
 	}
 	
+	/** Récupérer la partie heure d'enregistrement
+	 * @return heure Partie heure 
+	 */
 	public int getHeureEng(){
 		int heure = this.dateEnreg.get(Calendar.HOUR);;
 		if(this.dateEnreg.get(Calendar.AM_PM) == Calendar.PM){
@@ -204,8 +207,12 @@ public class Location {
 		return heure;
 	}
 	
+	/** Récupérer la partie minute d'une heure d'enregistrement
+	 * @return minute Minute de l'heure d'enregistrement
+	 */
 	public int getMinutesEng(){
-		return this.dateEnreg.get(Calendar.MINUTE);
+		int minutes = this.dateEnreg.get(Calendar.MINUTE);
+		return minutes;
 	}
 	
 	/** Indique si la location est terminée
